@@ -2,8 +2,69 @@
 <html>
 <head>
     <title></title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        #top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 3px solid black;
+            height: 50%;
+            box-sizing: border-box;
+        }
+        #top.touched{
+            background-color: indianred;
+        }
+        #debug {
+            bottom: 0;
+            right: 0;
+            border: 1px solid silver;
+            width: 25%;
+            position: absolute;
+        }
+        #trackPad {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            position: absolute;
+
+        }
+        #drawing {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+        #drawingGuide {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
+<div id="top">
+
+    <div id="drawing"></div>
+    <div id="drawingGuide"></div>
+    <div id="debug">
+        x: 800; y: 200
+    </div>
+</div>
+<div id="trackPad">
+
+</div>
+<script src="vendor/rx.all.js"></script>
+<script src="vendor/svg.js"></script>
+<script data-main="index" src="vendor/require.js"></script>
 
 </body>
 </html>
